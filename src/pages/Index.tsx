@@ -98,14 +98,7 @@ const Index = () => {
                 Смотреть котят
               </Button>
             </div>
-            <div className="mt-12 flex gap-10">
-              {[['WCF', 'родословная']].map(([n, l]) => (
-                <div key={l}>
-                  <div className="font-display text-4xl font-600 text-primary">{n}</div>
-                  <div className="text-sm text-muted-foreground">{l}</div>
-                </div>
-              ))}
-            </div>
+
           </div>
           <div className="relative animate-scale-in">
             <div className="absolute -inset-4 rounded-full bg-accent/20 blur-3xl" />
