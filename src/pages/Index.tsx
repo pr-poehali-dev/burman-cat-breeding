@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
 
+const LOGO = 'https://cdn.poehali.dev/projects/4573fa73-3165-4cf5-bf2a-fb8fde6440ac/bucket/654e26ba-f6ed-4c1a-bb9e-976576b0983a.jpg';
 const HERO = 'https://cdn.poehali.dev/projects/4573fa73-3165-4cf5-bf2a-fb8fde6440ac/files/f4dd3b7a-bbd7-44f0-99a3-7209d24fc076.jpg';
 const KITTEN = 'https://cdn.poehali.dev/projects/4573fa73-3165-4cf5-bf2a-fb8fde6440ac/files/bdaa0b2f-011e-41c7-ae61-5cfc78c177a6.jpg';
 const TRIO = 'https://cdn.poehali.dev/projects/4573fa73-3165-4cf5-bf2a-fb8fde6440ac/files/de605bf1-e91a-46c5-a45f-c72a28f6247f.jpg';
@@ -53,8 +54,9 @@ const Index = () => {
       {/* NAV */}
       <header className="fixed top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-md">
         <nav className="container flex h-16 items-center justify-between">
-          <button onClick={() => scrollTo('home')} className="flex items-center gap-2">
-            <span className="font-display text-3xl font-700 tracking-tight text-primary">BeaVell</span>
+          <button onClick={() => scrollTo('home')} className="flex items-center gap-3">
+            <img src={LOGO} alt="BeaVelle" className="h-11 w-11 rounded-full object-cover ring-1 ring-accent/40" />
+            <span className="font-display text-3xl font-700 tracking-tight text-primary">BeaVelle</span>
             <span className="hidden text-xs uppercase tracking-[0.25em] text-muted-foreground sm:inline">cattery</span>
           </button>
           <ul className="hidden gap-8 md:flex">
@@ -80,13 +82,13 @@ const Index = () => {
         <div className="container grid items-center gap-12 py-16 lg:grid-cols-2">
           <div className="animate-fade-in">
             <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-xs font-600 uppercase tracking-widest text-accent">
-              <Icon name="Sparkles" size={14} /> Питомник бурманских кошек
+              <Icon name="Sparkles" size={14} /> Питомник европейской бурмы
             </span>
             <h1 className="font-display text-6xl font-600 leading-[0.95] tracking-tight text-primary text-balance sm:text-7xl lg:text-8xl">
               Бархат, <br /> золото <span className="italic text-accent">в глазах</span>
             </h1>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-muted-foreground">
-              Элитные бурманские котята с безупречной родословной, идеальным здоровьем и характером, в который влюбляешься с первого мурчания.
+              BeaVelle — элитные котята европейской бурмы с безупречной родословной, идеальным здоровьем и характером, в который влюбляешься с первого мурчания.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Button size="lg" onClick={() => scrollTo('booking')} className="bg-accent text-accent-foreground hover:bg-accent/90">
@@ -106,11 +108,11 @@ const Index = () => {
             </div>
           </div>
           <div className="relative animate-scale-in">
-            <div className="absolute -inset-4 rounded-[2.5rem] bg-accent/20 blur-2xl" />
+            <div className="absolute -inset-4 rounded-full bg-accent/20 blur-3xl" />
             <img
-              src={HERO}
-              alt="Бурманская кошка BeaVell"
-              className="relative aspect-square w-full rounded-[2rem] object-cover shadow-2xl"
+              src={LOGO}
+              alt="Логотип питомника BeaVelle"
+              className="relative aspect-square w-full rounded-full object-cover shadow-2xl ring-1 ring-accent/30"
             />
             <div className="absolute -bottom-6 -left-6 animate-float rounded-2xl bg-card p-4 shadow-xl">
               <div className="flex items-center gap-3">
@@ -136,7 +138,7 @@ const Index = () => {
               Мы не разводим кошек. Мы растим характеры.
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
-              BeaVell — это семейный питомник, где каждый котёнок окружён вниманием с первого дня. Бурма — порода-компаньон: ласковая, общительная и невероятно преданная.
+              BeaVelle — это семейный питомник европейской бурмы, где каждый котёнок окружён вниманием с первого дня. Бурма — порода-компаньон: ласковая, общительная и невероятно преданная.
             </p>
           </div>
           <div className="mt-16 grid gap-6 md:grid-cols-3">
@@ -165,7 +167,7 @@ const Index = () => {
               <span className="text-xs font-600 uppercase tracking-widest text-accent">Галерея</span>
               <h2 className="mt-3 font-display text-5xl font-600 text-primary">Наши красавцы</h2>
             </div>
-            <p className="max-w-sm text-muted-foreground">Познакомьтесь с производителями и доступными котятами питомника BeaVell.</p>
+            <p className="max-w-sm text-muted-foreground">Познакомьтесь с производителями и доступными котятами питомника BeaVelle.</p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {GALLERY.map((g) => (
@@ -275,11 +277,12 @@ const Index = () => {
       {/* FOOTER */}
       <footer className="border-t border-border bg-secondary/40 py-10">
         <div className="container flex flex-col items-center justify-between gap-4 sm:flex-row">
-          <div className="flex items-center gap-2">
-            <span className="font-display text-2xl font-700 text-primary">BeaVell</span>
+          <div className="flex items-center gap-3">
+            <img src={LOGO} alt="BeaVelle" className="h-9 w-9 rounded-full object-cover ring-1 ring-accent/40" />
+            <span className="font-display text-2xl font-700 text-primary">BeaVelle</span>
             <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">cattery</span>
           </div>
-          <p className="text-sm text-muted-foreground">© 2026 BeaVell · Питомник бурманских кошек</p>
+          <p className="text-sm text-muted-foreground">© 2026 BeaVelle · Питомник европейской бурмы</p>
         </div>
       </footer>
     </div>
