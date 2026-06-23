@@ -99,7 +99,7 @@ const Index = () => {
               </Button>
             </div>
             <div className="mt-12 flex gap-10">
-              {[['12', 'лет опыта'], ['200+', 'счастливых семей'], ['WCF', 'родословная']].map(([n, l]) => (
+              {[['WCF', 'родословная']].map(([n, l]) => (
                 <div key={l}>
                   <div className="font-display text-4xl font-600 text-primary">{n}</div>
                   <div className="text-sm text-muted-foreground">{l}</div>
